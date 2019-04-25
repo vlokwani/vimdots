@@ -54,10 +54,10 @@ call matchadd('ColorColumn', '\%81v', 100)
 " split window options
 set splitbelow
 set splitright
-map <C-h> <C-w><C-h><CR>
-map <C-j> <C-w><C-j><CR>
-map <C-k> <C-w><C-k><CR>
-map <C-l> <C-w><C-l><CR>
+map <C-h> <C-w>h<CR>
+map <C-j> <C-w>j<CR>
+map <C-k> <C-w>k<CR>
+map <C-l> <C-w>l<CR>
 
 " making moving half a screen up easier
 nnoremap H Hzz<CR>
