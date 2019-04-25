@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'nvie/vim-flake8'
+	Plug 'gnattishness/cscope_maps'
+	Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -15,13 +17,15 @@ call plug#end()
 " NERDTree config:
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTreea
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " flake8 config:
 " autocmd FileType python map <buffer> <C-b> :call flake8#Flake8()<CR>
 autocmd BufWritePost *.py call flake8#Flake8()
 let g:flake8_cmd="/Users/vanshajlokwani/Library/Python/3.6/bin/flake8"
 
+" Tagbar config:
+map <C-c> :TagbarToggle<CR>
 
 syntax on
 
